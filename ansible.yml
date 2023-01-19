@@ -18,6 +18,8 @@
     
   - name: stop container
     shell: sudo docker stop $(docker ps -aq)
+    
+  - name: delete container  
     command: sudo docker rm $(docker ps -aq)
     
   - name: Deploy Docker Container
