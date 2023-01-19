@@ -16,9 +16,6 @@
     become : yes
     become_user : root
     
-  - name : Stop Old Containers
-    shell : docker stop $(docker ps -a -q)
-  
   - name: Deploy Docker Container
     command: docker run -itd -p 8090:8081 jpsh123456/banking-finance-image
 
