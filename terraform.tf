@@ -139,12 +139,7 @@ resource "aws_instance" "project-instance" {
  user_data  = <<-EOF
  #!/bin/bash
  sudo apt update -y
- sudo apt install docker.io -y
- sudo systemctl enable docker
- docker run -p 9090:9090 prom/prometheus
- docker run -d -p 3000:3000 grafana/grafana-enterpris
  
-  
  EOF
  tags = {
  Name = "project-instance"
