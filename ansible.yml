@@ -19,9 +19,6 @@
   - name: stop container
     shell: sudo docker stop $(docker ps -aq)
     
-  - name: delete container  
-    command: sudo docker rm $(docker ps -aq)
-    
   - name: Deploy Docker Container
     command: docker run -itd -p 8090:8081 jpsh123456/banking-finance-image
 
